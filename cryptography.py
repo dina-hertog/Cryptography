@@ -13,7 +13,9 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 while command != 'e' and command != 'd' and command != 'q':
-    print("Did not understand command, try again.")
-    command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
-message = input("Message: ")
-key = input("Key: ")
+    command = input("Did not understand command, try again. ")
+if command == 'q':
+    print("Goodbye! ")
+elif:
+    message = input("Message: ")
+    key = input("Key: ")
