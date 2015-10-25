@@ -16,6 +16,14 @@ while command != 'e' and command != 'd' and command != 'q':
     command = input("Did not understand command, try again. ")
 if command == 'q':
     print("Goodbye! ")
-else:
+elif command == 'e':
     message = input("Message: ")
     key = input("Key: ")
+    for x in message:
+        mnum = associations.find(x)
+        for y in key:
+            knum = associations.find(y)
+        lnum = mnum+knum
+        print(associations[lnum])
+else:
+    0=0
