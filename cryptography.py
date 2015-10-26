@@ -25,5 +25,3 @@ elif command == 'e':
             knum = associations.find(y)
         lnum = mnum+knum
         print(associations[lnum])
-else:
-    0=0
