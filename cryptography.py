@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Dina
-Credit: <list sources used, if any>
+Credit: none
 
 Assignment:
 
@@ -24,4 +24,13 @@ elif command == 'e':
         for y in key:
             knum = associations.find(y)
         lnum = mnum+knum
+        print(associations[lnum])
+elif command == 'd':
+    message = input("Message: ")
+    key = input("Key: ")
+    for x in message:
+        mnum = associations.find(x)
+        for y in key:
+            knum = associations.find(y)
+        lnum = mnum-knum
         print(associations[lnum])
