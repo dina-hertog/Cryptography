@@ -12,8 +12,7 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
-while command == 'q':
-    command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+while command != 'q':
     while command != 'e' and command != 'd' and command != 'q':
         command = input("Did not understand command, try again. ")
     if command == 'e':
@@ -34,4 +33,8 @@ while command == 'q':
                 knum = associations.find(y)
             lnum = mnum-knum
             print(associations[lnum], end = '')
+    command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 print("Goodbye! ")
+
+
+
