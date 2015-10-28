@@ -33,7 +33,7 @@ while command != 'q':
                 knum = associations.find(y)
             lnum = mnum-knum
             print(associations[lnum], end = '')
-    command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+    #command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 print("Goodbye! ")
 
 
