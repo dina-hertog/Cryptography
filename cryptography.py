@@ -24,7 +24,6 @@ while command != 'q':
                 knum = associations.find(y)
             lnum = mnum+knum
             print(associations[lnum], end = '')
-            print()
     else:
         message = input("Message: ")
         key = input("Key: ")
