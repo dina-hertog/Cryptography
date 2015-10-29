@@ -36,23 +36,3 @@ while command != 'q':
     print()
     command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 print("Goodbye! ")
-"""
-if command == 'e':
-        message = input("Message: ")
-        key = input("Key: ")
-        for x in message:
-            mnum = associations.find(x)
-            for y in key:
-                knum = associations.find(y)
-            lnum = mnum+knum
-            print(associations[lnum], end = '')
-else:
-        message = input("Message: ")
-        key = input("Key: ")
-        for x in message:
-            mnum = associations.find(x)
-            for y in key:
-                knum = associations.find(y)
-            lnum = mnum-knum
-            print(associations[lnum], end = '')
-"""
