@@ -18,12 +18,11 @@ while command != 'q':
     if command == 'e':
         message = input("Message: ")
         key = input("Key: ")
-        for x in message:
-            mnum = associations.find(x)
-            for y in key:
-                knum = associations.find(y)
-            lnum = mnum+knum
-            print(associations[lnum], end = '')
+        while len(key) < len(message):
+            key = key+key
+        
+        print(key)
+        #print(associations[lnum], end = '')
     else:
         message = input("Message: ")
         key = input("Key: ")
