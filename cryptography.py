@@ -13,7 +13,7 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
 while command != 'q':
-    while command != 'e' and command != 'd':
+    while command != 'e' and command != 'd' and command != 'q':
         command = input("Did not understand command, try again. ")
     if command == 'e':
         message = input("Message: ")
@@ -26,7 +26,7 @@ while command != 'q':
             knum = associations.find(a[1])
             b = mnum+knum
             print(associations[b], end = '')
-    else:
+    elif command == 'd':
         message = input("Message: ")
         key = input("Key: ")
         while len(key) < len(message):
@@ -37,16 +37,8 @@ while command != 'q':
             knum = associations.find(a[1])
             b = mnum-knum
             print(associations[b], end = '')
+    else:
+        print("Goodbye! ")
     print()
     command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 print("Goodbye! ")
-"""
-message = input("Message: ")
-        key = input("Key: ")
-        for x in message:
-            mnum = associations.find(x)
-            for y in key:
-                knum = associations.find(y)
-            lnum = mnum-knum
-            print(associations[lnum], end = '')
-"""
