@@ -20,11 +20,28 @@ while command != 'q':
         key = input("Key: ")
         while len(key) < len(message):
             key = key+key
-        
-        print(key)
-        #print(associations[lnum], end = '')
+        km = list(zip(message, key))
+        for a in km:
+            mnum = associations.find(a[0])
+            knum = associations.find(a[1])
+            b = mnum+knum
+            print(associations[b], end = '')
     else:
         message = input("Message: ")
+        key = input("Key: ")
+        while len(key) < len(message):
+            key = key+key
+        km = list(zip(message, key))
+        for a in km:
+            mnum = associations.find(a[0])
+            knum = associations.find(a[1])
+            b = mnum-knum
+            print(associations[b], end = '')
+    print()
+    command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+print("Goodbye! ")
+"""
+message = input("Message: ")
         key = input("Key: ")
         for x in message:
             mnum = associations.find(x)
@@ -32,6 +49,4 @@ while command != 'q':
                 knum = associations.find(y)
             lnum = mnum-knum
             print(associations[lnum], end = '')
-    print()
-    command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
-print("Goodbye! ")
+"""
