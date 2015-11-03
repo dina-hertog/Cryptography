@@ -32,7 +32,7 @@ while command != 'q':
                 if b < 0:
                     b = b + len(associations)
             print(associations[b], end = '')
-    #print()
+    print()
     if command != 'q':
         command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 print("Goodbye!")
