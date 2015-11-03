@@ -14,6 +14,8 @@ command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 while command != 'q':
     while command != 'e' and command != 'd' and command != 'q':
         command = input("Did not understand command, try again. ")
+        if command == 'q':
+            print("goodbye!")
     if command == 'e' or command == 'd':
         message = input("Message: ")
         key = input("Key: ")
@@ -32,9 +34,6 @@ while command != 'q':
                 if b < 0:
                     b = b + len(associations)
             print(associations[b], end = '')
-    else:
-        print("Goodbye! ")
     print()
     if command != 'q':
         command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
-print("goodbye! ")
